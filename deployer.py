@@ -69,6 +69,7 @@ def send_local_create_tx():
         data=SendVersionedTransaction(tx, config).to_json()
     )
     txSignature = response.json()['result']
-    print(f'Transaction: https://solscan.io/tx/{txSignature}')
+    print(f'https://solscan.io/tx/{txSignature}')
+    print(f'https://pump.fun/coin/{response.json()['address']}')
 
 send_local_create_tx()
